@@ -39,7 +39,7 @@ def get_summary():
     return completion.choices[0].message.content
 
 # PDF 파일에서 텍스트 추출
-with pdfplumber.open("Analyzing Higher Education Instructors perception on Metaverse based Education.pdf") as pdf:
+with pdfplumber.open(r"G:\내 드라이브\3. 개인파일\박사 과정\0. 연구 파일\Influencing Factors of Usage Intention of Metaverse Education Application Platform_ Empirical Evidence Based on PPM and TAM Models.pdf") as pdf:
     full_text = ""
     for page in pdf.pages:
         page_text = page.extract_text()
@@ -86,7 +86,7 @@ hwp.PutFieldText("서론", Introduction)
 hwp.PutFieldText("연구방법", Methodology)
 hwp.PutFieldText("연구결과", Results)
 hwp.PutFieldText("결론", Conclusion)
-hwp.SaveAs(r"D:\ResearchPaperRPA\논문 분석 테스트.hwp")
+hwp.SaveAs(r"D:\ResearchPaperRPA\논문 분석 결과.hwp")
 hwp.Quit()
 
 #print(summarized_text)
